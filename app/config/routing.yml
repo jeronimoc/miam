@@ -1,3 +1,13 @@
+miam_admin:
+    resource: "@MiamAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+miam_data:
+    resource: "@MiamDataBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 miam_domain:
     resource: "@MiamDomainBundle/Controller/"
     type:     annotation
