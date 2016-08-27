@@ -21,6 +21,12 @@ class ShopBranch
      */
     private $id;
 
+    /**
+     * @var Shop
+     *
+     * @ORM\ManyToOne(targetEntity="Shop")
+     */
+    private $shop;
 
     /**
      * Get id
@@ -32,4 +38,3 @@ class ShopBranch
         return $this->id;
     }
 }
-

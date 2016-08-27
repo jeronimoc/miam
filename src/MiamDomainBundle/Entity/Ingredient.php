@@ -125,4 +125,3 @@ class Ingredient
         return $this->description;
     }
 }
-

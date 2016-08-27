@@ -126,4 +126,3 @@ class Article
         return $this->ingredient;
     }
 }
-

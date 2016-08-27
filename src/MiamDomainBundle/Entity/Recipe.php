@@ -228,5 +228,38 @@ class Recipe
     {
         return $this->readyTime;
     }
-}
 
+    /**
+     * Add ingredient
+     *
+     * @param \MiamDomainBundle\Entity\Ingredient $ingredient
+     *
+     * @return Recipe
+     */
+    public function addIngredient(\MiamDomainBundle\Entity\Ingredient $ingredient)
+    {
+        $this->ingredients[] = $ingredient;
+
+        return $this;
+    }
+
+    /**
+     * Remove ingredient
+     *
+     * @param \MiamDomainBundle\Entity\Ingredient $ingredient
+     */
+    public function removeIngredient(\MiamDomainBundle\Entity\Ingredient $ingredient)
+    {
+        $this->ingredients->removeElement($ingredient);
+    }
+
+    /**
+     * Get ingredients
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getIngredients()
+    {
+        return $this->ingredients;
+    }
+}

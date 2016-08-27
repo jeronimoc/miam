@@ -125,4 +125,3 @@ class Shop
         return $this->url;
     }
 }
-

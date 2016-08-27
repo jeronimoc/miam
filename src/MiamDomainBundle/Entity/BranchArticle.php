@@ -77,5 +77,52 @@ class BranchArticle
     {
         return $this->price;
     }
-}
 
+    /**
+     * Set article
+     *
+     * @param \MiamDomainBundle\Entity\Article $article
+     *
+     * @return BranchArticle
+     */
+    public function setArticle(\MiamDomainBundle\Entity\Article $article = null)
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    /**
+     * Get article
+     *
+     * @return \MiamDomainBundle\Entity\Article
+     */
+    public function getArticle()
+    {
+        return $this->article;
+    }
+
+    /**
+     * Set branch
+     *
+     * @param \MiamDomainBundle\Entity\ShopBranch $branch
+     *
+     * @return BranchArticle
+     */
+    public function setBranch(\MiamDomainBundle\Entity\ShopBranch $branch = null)
+    {
+        $this->branch = $branch;
+
+        return $this;
+    }
+
+    /**
+     * Get branch
+     *
+     * @return \MiamDomainBundle\Entity\ShopBranch
+     */
+    public function getBranch()
+    {
+        return $this->branch;
+    }
+}
