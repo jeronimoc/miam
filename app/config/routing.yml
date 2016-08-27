@@ -1,0 +1,8 @@
+miam_domain:
+    resource: "@MiamDomainBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
