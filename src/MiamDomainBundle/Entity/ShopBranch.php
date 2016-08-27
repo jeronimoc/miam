@@ -29,6 +29,32 @@ class ShopBranch
     private $shop;
 
     /**
+     * @var String
+     *
+     *
+     * @ORM\Column(name="address", type="string")
+     */
+    private $address;
+
+    /**
+     * @var float
+     *
+     * Latitude for geolocation
+     *
+     * @ORM\Column(name="lat", type="float", precision=10, scale=6)
+     */
+    private $lat;
+
+    /**
+     * @var int
+     *
+     * Longitude for geolocation
+     *
+     * @ORM\Column(name="long", type="float", precision=10, scale=6)
+     */
+    private $lng;
+
+    /**
      * Get id
      *
      * @return int
