@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jeronimo
- * Date: 27/08/16
- * Time: 14:45
- */
 
 namespace MiamDataBundle\DataFixtures\ORM;
 
@@ -24,11 +18,14 @@ class LoadIngredientData extends AbstractFixture implements OrderedFixtureInterf
      */
     public function load(ObjectManager $manager)
     {
-        $ingredient = new Ingredient();
-        $ingredient->setName("zanahoria");
-        $ingredient->setDescription("Verdura naranja");
+        foreach ($this->getIngredientsList() as $ingredientName) {
+            $ingredient = new Ingredient();
+            $ingredient->setName($ingredientName);
+            $manager->persist($ingredient);
 
-        $manager->persist($ingredient);
+            $this->addReference($ingredientName, $ingredient);
+        }
+
         $manager->flush();
     }
 
@@ -39,6 +36,24 @@ class LoadIngredientData extends AbstractFixture implements OrderedFixtureInterf
      */
     public function getOrder()
     {
-        return 1;
+        return 2;
+    }
+
+    /**
+     * Return Ingredients for test data
+     *
+     * @return integer
+     */
+    public function getIngredientsList(){
+        $ingredientsFile = fopen('src/MiamDataBundle/DataFixtures/testDataFiles/ingredients.csv', 'r');
+        $ingredientsArray = array();
+
+        while (($line = fgetcsv($ingredientsFile)) !== false) {
+            $ingredientsArray[] = $line[0];
+        }
+
+        fclose($ingredientsFile);
+
+        return $ingredientsArray;
     }
 }
