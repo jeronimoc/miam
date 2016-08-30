@@ -39,7 +39,7 @@ class BranchArticle
     /**
      * @var int
      *
-     * @ORM\Column(name="price", type="integer")
+     * @ORM\Column(name="price", type="decimal", precision=10, scale=6)
      */
     private $price;
 

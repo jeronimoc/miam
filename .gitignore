@@ -15,3 +15,11 @@
 /vendor/
 /web/bundles/
 /.idea/
+src/MiamDomainBundle/Entity/Article.php~
+src/MiamDomainBundle/Entity/BranchArticle.php~
+src/MiamDomainBundle/Entity/Brand.php~
+src/MiamDomainBundle/Entity/Ingredient.php~
+src/MiamDomainBundle/Entity/Recipe.php~
+src/MiamDomainBundle/Entity/Shop.php~
+src/MiamDomainBundle/Entity/ShopBranch.php~
+src/MiamDomainBundle/Entity/User.php~

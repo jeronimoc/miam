@@ -21,8 +21,11 @@ class LoadArticleData extends AbstractFixture implements OrderedFixtureInterface
         foreach ($this->getArticlesList() as $articleData) {
             $article = new Article();
             $article->setName($articleData[1]);
+            $article->setQuantity($articleData[3]);
             $article->setIngredient($this->getReference($articleData[0]));
             $manager->persist($article);
+
+            $this->addReference($articleData[1] . "-article", $article);
         }
 
         $manager->flush();

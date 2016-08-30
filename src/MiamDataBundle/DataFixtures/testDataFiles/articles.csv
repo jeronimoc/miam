@@ -1,8 +1,8 @@
-"red onion","red onion", ""
-"almond","almond", ""
-"all-purpose flour","Harina 0000 Molinos", "Molinos"
-"spaghetti","fideos luchetti 500", ""
-"anchovy","anchovy", ""
-"anise","anise", ""
-"apple juice","Jugo de manzana Baggio", "Baggio"
-"artichoke","artichoke", ""
+"red onion","red onion", "", 100
+"almond","almond", "", 100
+"all-purpose flour","Harina 0000 Molinos", "Molinos", 1000
+"spaghetti","fideos luchetti 500", "", 500
+"anchovy","anchovy", "", 100
+"anise","anise", "", 100
+"apple juice","Jugo de manzana Baggio", "Baggio", 1000
+"artichoke","artichoke", "", 100

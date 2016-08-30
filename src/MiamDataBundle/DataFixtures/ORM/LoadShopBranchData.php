@@ -19,12 +19,14 @@ class LoadShopBranchData extends AbstractFixture implements OrderedFixtureInterf
     {
         foreach ($this->getShopBranchList() as $shopBranchData) {
             $shopBranch = new ShopBranch();
-            $shopBranch->setAddress("blabla");
             $shopBranch->setShop($this->getReference($shopBranchData[0]));
             $shopBranch->setLat($shopBranchData[1]);
             $shopBranch->setLng($shopBranchData[2]);
+            $shopBranch->setAddress($shopBranchData[3]);
 
             $manager->persist($shopBranch);
+
+            $this->addReference($shopBranch->getShop()->getName() . "-" . $shopBranch->getAddress(), $shopBranch);
 
         }
 
