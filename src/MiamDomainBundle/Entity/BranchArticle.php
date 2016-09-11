@@ -25,6 +25,7 @@ class BranchArticle
      * @var Article
      *
      * @ORM\ManyToOne(targetEntity="Article")
+     * @ORM\JoinColumn(onDelete="cascade")
      */
     private $article;
 
@@ -33,6 +34,7 @@ class BranchArticle
      * @var ShopBranch
      *
      * @ORM\ManyToOne(targetEntity="ShopBranch")
+     * @ORM\JoinColumn(onDelete="set null")
      */
     private $branch;
 

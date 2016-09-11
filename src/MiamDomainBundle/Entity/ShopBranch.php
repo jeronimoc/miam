@@ -25,6 +25,7 @@ class ShopBranch
      * @var Shop
      *
      * @ORM\ManyToOne(targetEntity="Shop")
+     * @ORM\JoinColumn(onDelete="set null")
      */
     private $shop;
 

@@ -42,6 +42,13 @@ class Ingredient
      */
     private $description;
 
+    /**
+     * @var IngredientDensity
+     * 
+     * @ORM\ManyToOne(targetEntity="MiamDomainBundle\Entity\IngredientDensity")
+     */
+    private $ingredientDensity;
+
 
     /**
      * Get id
@@ -123,5 +130,29 @@ class Ingredient
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set ingredientDensity
+     *
+     * @param \MiamDomainBundle\Entity\IngredientDensity $ingredientDensity
+     *
+     * @return Ingredient
+     */
+    public function setIngredientDensity(\MiamDomainBundle\Entity\IngredientDensity $ingredientDensity = null)
+    {
+        $this->ingredientDensity = $ingredientDensity;
+
+        return $this;
+    }
+
+    /**
+     * Get ingredientDensity
+     *
+     * @return \MiamDomainBundle\Entity\IngredientDensity
+     */
+    public function getIngredientDensity()
+    {
+        return $this->ingredientDensity;
     }
 }

@@ -1,3 +1,8 @@
+miam_api:
+    resource: "@MiamApiBundle/Controller/"
+    type:     rest
+    prefix:   /api
+
 miam_admin:
     resource: "@MiamAdminBundle/Controller/"
     type:     annotation
@@ -13,6 +18,3 @@ miam_domain:
     type:     annotation
     prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation

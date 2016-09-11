@@ -14,11 +14,14 @@ class AppKernel extends Kernel
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
             new MiamDomainBundle\MiamDomainBundle(),
             new MiamDataBundle\MiamDataBundle(),
             new MiamAdminBundle\MiamAdminBundle(),
+            new MiamApiBundle\MiamApiBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

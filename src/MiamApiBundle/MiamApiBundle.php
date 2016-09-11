@@ -1,9 +1,9 @@
 <?php
 
-namespace AppBundle;
+namespace MiamApiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AppBundle extends Bundle
+class MiamApiBundle extends Bundle
 {
 }

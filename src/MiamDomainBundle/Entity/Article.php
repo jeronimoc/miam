@@ -40,6 +40,7 @@ class Article
      *
      * @ORM\ManyToOne(targetEntity="Ingredient")
      * @ORM\JoinTable(name="article_ingredients")
+     * @ORM\JoinColumn(onDelete="set null")
      */
     private $ingredient;
 

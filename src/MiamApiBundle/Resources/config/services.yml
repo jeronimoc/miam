@@ -1,0 +1,4 @@
+services:
+#    miam_api.example:
+#        class: MiamApiBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
