@@ -55,6 +55,16 @@ class ShopBranch
      */
     private $lng;
 
+
+    /**
+     * @var string
+     *
+     * Longitude for geolocation
+     *
+     * @ORM\Column(name="thirdPartyId", type="string", nullable=true)
+     */
+    private $thirdPartyId;
+
     /**
      * Get id
      *
